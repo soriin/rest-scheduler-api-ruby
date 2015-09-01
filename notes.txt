@@ -1,0 +1,16 @@
+=====Employee Stuff======
+GET /users/:id/shifts - get all shifts for employee
+--{shift: SHIFT, manager: USER-SUMMARY}
+GET /users/:id/summary/?start=DATE&end=DATE - get user work history for date range
+--{summary: {start: DATE, end: DATE, hoursWorked: FLOAT}[]}
+
+=====Manager Stuff======
+POST /shifts/ - create new shift
+--{shift: SHIFT}
+PUT /shifts/:shiftId/user - update user for shift
+--{employee_id: INT}
+PUT /shifts/:shiftId/time - update time for shift
+--{start: DATE, end: DATE}
+GET /shifts/?from=DATE&to=DATE - get shifts for date range
+--{shifts:SHIFT[]}
+GET /users/:id/ - get info about employee
