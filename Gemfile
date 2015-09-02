@@ -1,17 +1,21 @@
 source 'https://rubygems.org'
+gem "nokogiri", "=1.6.7.rc2"
+gem 'rails', github: "rails/rails"
+gem 'sprockets-rails', github: "rails/sprockets-rails"
+gem 'sprockets', github: "rails/sprockets"
+gem 'sass-rails', github: "rails/sass-rails"
+gem 'arel', github: "rails/arel"
+gem 'rack', github: "rack/rack"
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+# Use ActiveModelSerializers to serialize JSON responses
+gem 'active_model_serializers', '~> 0.10.0.rc2'
+gem 'jbuilder'
+
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -19,11 +23,8 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'rspec', :require => 'spec'
