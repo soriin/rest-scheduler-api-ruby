@@ -9,10 +9,8 @@ GET /users/:id/teammates/?start=DATE&end=DATE - returns other users that will be
 =====Manager Stuff======
 POST /shifts/ - create new shift
 --{shift: SHIFT}
-PUT /shifts/:shiftId/user - update user for shift
---{employee_id: INT}
-PUT /shifts/:shiftId/time - update time for shift
---{start: DATE, end: DATE}
+PUT /shifts/:shiftId - update a shift
+--{employee_id: INT, start: DATE, end: DATE}
 GET /shifts/?start=DATE&end=DATE - get shifts for date range
 --{shifts:SHIFT[]}
 GET /users/ - get info about all employees

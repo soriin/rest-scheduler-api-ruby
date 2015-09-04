@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
+
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
+
 gem "nokogiri", "=1.6.7.rc2"
 gem 'rails', github: "rails/rails"
 gem 'sprockets-rails', github: "rails/sprockets-rails"
@@ -6,9 +10,6 @@ gem 'sprockets', github: "rails/sprockets"
 gem 'sass-rails', github: "rails/sass-rails"
 gem 'arel', github: "rails/arel"
 gem 'rack', github: "rack/rack"
-
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use ActiveModelSerializers to serialize JSON responses
 gem 'active_model_serializers', '~> 0.10.0.rc2'
